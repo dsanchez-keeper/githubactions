@@ -20,8 +20,8 @@ jobs:
           keeper-secret-config: ${{ secrets.DEMO_SECRET }}
           secrets: |-
 
-            ZwZ7r955CXVgqB7hWx7jqg/field/password > github
+            ZwZ7r955CXVgqB7hWx7jqg/field/password > githubmysql
 
       - name: Print PW Value
         run: |
-          echo "password is ${{ steps.ksm.outputs.github }}"
+          echo "password is ${{ steps.ksm.outputs.githubmysql }}"
