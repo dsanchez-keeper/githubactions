@@ -1,0 +1,27 @@
+on:
+  #push:
+    #branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      
+      - name: Retrieve secrets from Keeper
+        id: ksm
+        uses: Keeper-Security/ksm-action@master
+        with:
+          keeper-secret-config: ${{ secrets.KSM_CONFIG }}
+          secrets: |-
+
+            8uj9ViYv0UwH4Fs9UQi5fw/field/password > DEMOPW
+
+      - name: Print PW Value
+        run: |
+          echo "password is ${{ steps.ksm.outputs.DEMOPW }}"
