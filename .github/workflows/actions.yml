@@ -20,7 +20,7 @@ jobs:
           keeper-secret-config: ${{ secrets.KSM_CONFIG }}
           secrets: |-
 
-            2n4D6YfB9dWx80lsW2YR2A/field/password > DEMOPW
+            2n4D6YfB9dWx80lsW2YR2A/field/password > github test
 
       - name: Print PW Value
         run: |
