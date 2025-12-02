@@ -17,10 +17,10 @@ jobs:
         id: ksm
         uses: Keeper-Security/ksm-action@master
         with:
-          keeper-secret-config: ${{ secrets.KSM_CONFIG }}
+          keeper-secret-config: ${{ secrets.DEMO_SECRET }}
           secrets: |-
 
-            2n4D6YfB9dWx80lsW2YR2A/field/password > github test
+            ZwZ7r955CXVgqB7hWx7jqg/field/password > github mysql
 
       - name: Print PW Value
         run: |
