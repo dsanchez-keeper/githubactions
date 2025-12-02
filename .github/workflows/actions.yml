@@ -24,4 +24,4 @@ jobs:
 
       - name: Print PW Value
         run: |
-          echo "password is ${{ steps.ksm.outputs.DEMOPW }}"
+          echo "password is ${{ steps.ksm.outputs.githubmysql }}"
